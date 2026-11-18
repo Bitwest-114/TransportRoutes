@@ -1,0 +1,28 @@
+@model SearchViewModel
+
+<h1>Пошук транспортних маршрутів</h1>
+
+<form asp-action="Search" method="post">
+    <label for="Departure">Звідки</label>
+    <input id="Departure" name="Departure" value="@Model.Departure" placeholder="Наприклад, Львів" />
+
+    <label for="Destination">Куди</label>
+    <input id="Destination" name="Destination" value="@Model.Destination" placeholder="Наприклад, Київ" />
+
+    <button type="submit">Знайти маршрут</button>
+</form>
+
+@if (Model.Error != null)
+{
+    <p class="error">@Model.Error</p>
+}
+
+@foreach (TransportRoute route in Model.Routes)
+{
+    <div class="route">
+        <h2>@route.RouteName</h2>
+        <p>Зупинки: @string.Join(" → ", route.Stops)</p>
+        <p>Відправлення: @route.DepartureTime</p>
+        <p>Ціна: @route.Price грн</p>
+    </div>
+}

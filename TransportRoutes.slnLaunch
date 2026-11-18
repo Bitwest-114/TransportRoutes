@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Запуск обох проєктів",
+    "Projects": [
+      {
+        "Path": "Transport.Service\\Transport.Service.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Transport.Web\\Transport.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
