@@ -1,6 +1,6 @@
 # Пошук транспортних маршрутів
 
-Навчальний проєкт із двох частин: вебзастосунку `Transport.Web` та API `Transport.Service`.
+ проєкт із двох частин: вебзастосунку `Transport.Web` та API `Transport.Service`.
 
 ## Запуск у Visual Studio
 
